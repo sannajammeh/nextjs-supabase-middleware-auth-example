@@ -32,6 +32,8 @@ export const onAuthStateChange: SupabaseClient["auth"]["onAuthStateChange"] = (
   if (session) {
     const event: AuthChangeEvent = "SIGNED_IN";
     callback(event, session);
+  } else {
+    callback("SIGNED_OUT", null);
   }
   return supabase.auth.onAuthStateChange(callback);
 };

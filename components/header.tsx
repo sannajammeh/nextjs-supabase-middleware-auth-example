@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/future/image";
-import supaLogo from "../../public/supabase.webp";
+import supaLogo from "public/supabase.webp";
 
 const Header = () => {
   return (
