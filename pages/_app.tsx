@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";
-import Header from "./components/header";
+import Header from "../components/header";
 
 interface Props extends AppProps {
   Component: NextPage & {

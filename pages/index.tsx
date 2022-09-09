@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Input } from "./components/ui";
+import { Button, Input } from "../components/ui";
 
 const Home = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
