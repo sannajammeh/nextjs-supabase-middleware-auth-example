@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Button, Input } from "../components/ui";
 
@@ -15,24 +16,17 @@ const Home = () => {
     <div className="container pt-12 text-center">
       <h1 className="text-4xl font-bold">Homepage</h1>
       <p className="mt-4 mb-12">
-        This is the homepage, from here you can log in.
+        This is the homepage, from here you can go to the dashboard
       </p>
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-sm mx-auto flex flex-col text-center"
+
+      <Button
+        href="/dashboard"
+        as={Link}
+        legacyBehavior={false}
+        className="mx-auto w-max"
       >
-        <h2 className="text-3xl font-semibold mb-6">Login</h2>
-        <Input
-          type="email"
-          name="email"
-          required
-          placeholder="Email address"
-          className="mb-4"
-        />
-        <Button type="submit">
-          <span>Send magic link</span>
-        </Button>
-      </form>
+        <span>Go to dashboard</span>
+      </Button>
     </div>
   );
 };
