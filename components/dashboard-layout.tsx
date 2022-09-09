@@ -5,17 +5,19 @@ import React, { useEffect } from "react";
 type Props = {};
 
 const DashboardLayout = ({ children }: React.PropsWithChildren<Props>) => {
-  const loaded = useAuthLoaded();
-  const router = useRouter();
-  const user = useUser();
+  // The below code is no longer needed as we are safely protecting the endpoints using the middleware
 
-  useEffect(() => {
-    if (!user && loaded) {
-      router.push("/login");
-    }
-  }, [loaded, user, router]);
+  // const loaded = useAuthLoaded();
+  // const router = useRouter();
+  // const user = useUser();
 
-  if (!user) return null;
+  // useEffect(() => {
+  //   if (!user && loaded) {
+  //     router.push("/login");
+  //   }
+  // }, [loaded, user, router]);
+
+  // if (!user) return null;
 
   return <div className="container">{children}</div>;
 };
